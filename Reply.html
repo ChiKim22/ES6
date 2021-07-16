@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reply</title>
+</head>
+<body>
+    <h1>Comment</h1>
+    <div id="comment">
+        <!-- <span>NickName</span> 
+        <br>
+        <input type="text" v-model="user">
+        <br>
+        <br>
+        <span>Content</span>
+        <br>
+        <input v-model="comment">
+        <br>
+        <button @click="save" type="submit">Upload!</button>
+        <br>
+        <br>
+        <span>List</span>
+        <br>
+        <ul>
+            <li v-for="msg in messages">
+                <p>{{ msg.user }}: {{ msg.comment }}</p>
+            </li>
+        </ul> -->
+
+        <!-- component -->
+        <comments></comments>
+        
+    </div>
+
+        <!-- Vue 라이브러리 부르는 코드. 아래는 자바스크립트 코드 위치. -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+        <script src="./Reply.js"></script>
+</body>
+</html>
