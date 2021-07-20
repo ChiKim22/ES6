@@ -1,0 +1,1 @@
+(()=>{var o={985:(o,e)=>{e.hello=(o="user")=>`Hello, ${o}`}},e={};function r(s){var l=e[s];if(void 0!==l)return l.exports;var t=e[s]={exports:{}};return o[s](t,t.exports,r),t.exports}(()=>{"use strict";const o=r(985);console.log(8),console.log(o.hello("User1"))})()})();
