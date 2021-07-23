@@ -14,7 +14,6 @@
             @check="checkTodo"
         />
     </ul>
-
     <p v-else>
         Nothing left in the list. Add a new todo in input plz.
     </p>    
@@ -40,7 +39,8 @@ export default {
                     id: nextTodoId++,
                     text: 'Example'
                 }
-            ]
+            ],
+            date:''
         }
     },
     methods:{
@@ -49,8 +49,9 @@ export default {
             if (trimmeddText) {
                 this.todos.push({
                 id: nextTodoId++,
-                text: trimmeddText
-                })
+                text: trimmeddText,
+                date:null
+                });
                 this.newTodoText = ''
             }
         },
@@ -59,15 +60,14 @@ export default {
                 return todo.id !==  idToRemove
             })
         },
-        checkTodo(){
-            const date = new Date()
+        checkTodo(id){
+            var now = new Date();
+            let time = `You Made It! [${now.getHours()} H ${now.getMinutes()} M ${now.getSeconds()} S] Congratulations! `
 
-            this.date = date.getDate()
-
-            const todos = date
-
-            return todos == checkTodo
-
+            let index = this.todos.findIndex(todo => {
+                return todo.id == id
+            });
+            this.todos[index].date=time;
         }
     }
 }
